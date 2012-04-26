@@ -63,19 +63,21 @@
 	<link rel="icon" href="favicon.ico" type="image/x-icon" />
 	<link href="style.css" media="screen" rel="stylesheet" type="text/css" />
 	<body>
-		<div class="command">
-			<form>
-				git add . && <br />
-				git commit -am "<input type="text" name="message" />" && <br />
-				git push<br />
-				<input type="button" value="Execute" class="go">
-				<input type="hidden" name="action" value="git" />
-				<input type="hidden" name="stage" value="true" />
-				<input type="hidden" name="push" value="true" />
-				<input type="hidden" name="pull" value="false" />
-			</form>
+		<div id="wrapper">
+			<div class="command">
+				<form>
+					git add . &&
+					git commit -am "<input type="text" name="message" />" &&
+					git push
+					<input type="button" value="Execute" class="go">
+					<input type="hidden" name="action" value="git" />
+					<input type="hidden" name="stage" value="true" />
+					<input type="hidden" name="push" value="true" />
+					<input type="hidden" name="pull" value="false" />
+				</form>
+			</div>
+			<pre></pre>
 		</div>
-		<pre></pre>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){

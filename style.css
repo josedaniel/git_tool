@@ -65,14 +65,42 @@ td { vertical-align: top; }
 .chromeframe { margin: 0.2em 0; background: #ccc; color: black; padding: 0.2em 0; }
 
 
-
-
 body{
   background-color: #1A1A1A;
   color:#fff;
   font-family:'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+#wrapper{
+    width:80%;
+    margin: 50px auto 0 auto;
+}
+
+.command{
+    font-family:monaco, courier, monospace;
+}
+
+input[type="text"]{
+     width: 280px;
+    border: 1px solid #000;
+    padding: 7px 10px 7px 10px;
+    font-size: 14px;
+    color: #999;
+    outline: none;
+    border-radius: 0.3em;
+}
+
+input[type="button"]{
+    cursor: pointer;
+    border: none;
+    background-color: #970417;
+    font-family:arial, helvetica, sans-serif;
+    color: white;
+    font-weight: bold;
+    padding: 5px 10px 5px 10px;
+    height: 32px;
+    border-radius: 0.3em; 
+}
 
 @media only screen and (min-width: 35em) {
   

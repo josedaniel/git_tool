@@ -67,12 +67,12 @@
 			<form>
 				git add . && <br />
 				git commit -am "<input type="text" name="message" />" <br />
-				git push
+				git push<br />
+				<input type="button" value="Execute" class="go">
 				<input type="hidden" name="action" value="git" />
 				<input type="hidden" name="stage" value="true" />
 				<input type="hidden" name="push" value="true" />
-				<input type="hidden" name="pull" value="true" />
-				<input type="button" value="Execute" class="go">
+				<input type="hidden" name="pull" value="false" />
 			</form>
 		</div>
 		<pre></pre>
@@ -81,6 +81,7 @@
 			$(document).ready(function(){
 				$('.go').click(function(e){
 					e.preventDefault();
+					$('pre').html('Working...');
 					var data = $(this).parent().serialize();
 					$.post('index.php',data,function(r){
 						$('pre').html(r);

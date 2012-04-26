@@ -41,11 +41,18 @@
 		foreach ($commands as $command) {
 			if($command != ''){
 				$a = shell_exec($command);
-				$output = $output."git:\n".$a;	
+				if($a != ''){
+					$output = $output."\ngit:\n".$a;	
+				}
 			}
 		}
 
-		echo $output;
+		if($output != ''){
+			echo $output;	
+		}else{
+			echo "\n\ngit_tool:\ncommand executed successfully.";
+		}
+		
 
 	}else{ 
 ?>

@@ -69,7 +69,7 @@
 					git add . &&
 					git commit -am "<input type="text" name="message" />" &&
 					git push
-					<input type="button" value="Execute" class="go">
+					<input type="button" value="Execute" class="go" style="margin-left:20px;">
 					<input type="hidden" name="action" value="git" />
 					<input type="hidden" name="stage" value="true" />
 					<input type="hidden" name="push" value="true" />
@@ -77,6 +77,7 @@
 				</form>
 			</div>
 			<pre></pre>
+			<input type="button" value="Clear" class="clear" />
 		</div>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script type="text/javascript">
@@ -88,6 +89,11 @@
 					$.post('index.php',data,function(r){
 						$('pre').html(r);
 					});
+				});
+
+				$('.clear').click(function(e){
+					e.preventDefault();
+					$('pre').html('');
 				});	
 			});
 		</script>

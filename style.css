@@ -78,7 +78,20 @@ body{
 
 .command{
     font-family:monaco, courier, monospace;
-    text-align:center;
+    width:98%;
+    float:left;
+    background-color:#333;
+    padding:1%;
+    margin-bottom:20px;
+}
+
+pre{
+    background-color:#333;
+    padding:10px 1% 10px 1%;
+    width:98%;
+    float:left;
+    color:#fff;
+    min-height:400px;
 }
 
 input[type="text"]{
@@ -101,7 +114,6 @@ input[type="button"]{
     padding: 5px 10px 5px 10px;
     height: 32px;
     border-radius: 0.3em;
-    margin-left:20px; 
 }
 
 @media only screen and (min-width: 35em) {

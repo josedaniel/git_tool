@@ -67,7 +67,7 @@
 			<div class="command">
 				<form>
 					git add . &&
-					git commit -am "<input type="text" name="message" />" &&
+					git commit -am "<input type="text" name="message" class="message" />" &&
 					git push
 					<input type="button" value="Execute" class="go" style="margin-left:20px;">
 					<input type="hidden" name="action" value="git" />
@@ -94,6 +94,7 @@
 				$('.clear').click(function(e){
 					e.preventDefault();
 					$('pre').html('');
+					$('.message').val('');
 				});	
 			});
 		</script>

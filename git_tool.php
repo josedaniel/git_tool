@@ -40,7 +40,7 @@
 		$output = '';
 		foreach ($commands as $command) {
 			$a = shell_exec($command);
-			$output = $output."\n***************\n".$a;
+			$output = $output."git:\n".$a;
 		}
 
 		echo $output;

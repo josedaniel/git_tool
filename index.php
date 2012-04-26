@@ -66,7 +66,7 @@
 		<div class="command">
 			<form>
 				git add . && <br />
-				git commit -am "<input type="text" name="message" />" <br />
+				git commit -am "<input type="text" name="message" />" && <br />
 				git push<br />
 				<input type="button" value="Execute" class="go">
 				<input type="hidden" name="action" value="git" />

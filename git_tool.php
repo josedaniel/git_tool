@@ -11,30 +11,30 @@
 
 		//add .
 		if($stage_all == 'true'){
-			$commands[0] = 'git add .';
+			$commands[1] = 'git add .';
 		}else{
-			$commands[0] = '';
+			$commands[1] = '';
 		}
 
 		//commit
 		if($message != ''){
-			$commands[1] = "git commit -am '".$message."'";
-		}else{
-			$commands[1] = "";
-		}
-
-		//push
-		if($push == 'true'){
-			$commands[2] = "git push";
+			$commands[2] = "git commit -am '".$message."'";
 		}else{
 			$commands[2] = "";
 		}
 
-		//pull
-		if($pull == 'true'){
-			$commands[3] = "git pull";
+		//push
+		if($push == 'true'){
+			$commands[3] = "git push";
 		}else{
 			$commands[3] = "";
+		}
+
+		//pull
+		if($pull == 'true'){
+			$commands[0] = "git pull";
+		}else{
+			$commands[0] = "";
 		}
 
 		$output = '';

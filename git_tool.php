@@ -39,8 +39,10 @@
 
 		$output = '';
 		foreach ($commands as $command) {
-			$a = shell_exec($command);
-			$output = $output."git:\n".$a;
+			if($command != ''){
+				$a = shell_exec($command);
+				$output = $output."git:\n".$a;	
+			}
 		}
 
 		echo $output;

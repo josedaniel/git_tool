@@ -9,6 +9,13 @@
 
 		$commands = array();
 
+		//pull
+		if($pull == 'true'){
+			$commands[0] = "git pull";
+		}else{
+			$commands[0] = "";
+		}
+
 		//add .
 		if($stage_all == 'true'){
 			$commands[1] = 'git add .';
@@ -30,12 +37,6 @@
 			$commands[3] = "";
 		}
 
-		//pull
-		if($pull == 'true'){
-			$commands[0] = "git pull";
-		}else{
-			$commands[0] = "";
-		}
 
 		$output = '';
 		foreach ($commands as $command) {

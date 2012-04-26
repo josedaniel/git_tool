@@ -59,32 +59,29 @@
 ?>
 	<!doctype html>
 	<charset=utf-8>
-	<title>Git Toy</title>
+	<title>Git Tool</title>
 	<link rel="icon" href="favicon.ico" type="image/x-icon" />
 	<link href="style.css" media="screen" rel="stylesheet" type="text/css" />
 	<body>
-		<form method="post">
-			<input type="hidden" name="action" value="git" />
-			stage all?<br />
-			<input type="text" name="stage" value="true" /><br /><br />
-			
-			commit message:<br />
-			<input type="text" name="message" value="" /><br /><br />
-
-			pull?<br />
-			<input type="text" name="pull" value="true" /><br /><br />
-
-			pushh?<br />
-			<input type="text" name="push" value="true" />
-		</form>
-		<input type="button" value="Go" id="go">
+		<div class="command">
+			<form>
+				git add . && <br />
+				git commit -am "<input type="text" name="message" />" <br />
+				git push
+				<input type="hidden" name="action" value="git" />
+				<input type="hidden" name="stage" value="true" />
+				<input type="hidden" name="push" value="true" />
+				<input type="hidden" name="pull" value="true" />
+				<input type="button" value="Execute" class="go">
+			</form>
+		</div>
 		<pre></pre>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
-				$('#go').click(function(e){
+				$('.go').click(function(e){
 					e.preventDefault();
-					var data = $('form').serialize();
+					var data = $(this).parent().serialize();
 					$.post('index.php',data,function(r){
 						$('pre').html(r);
 					});

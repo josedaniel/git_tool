@@ -78,6 +78,7 @@ body{
 
 .command{
     font-family:monaco, courier, monospace;
+    text-align:center;
 }
 
 input[type="text"]{
@@ -93,13 +94,14 @@ input[type="text"]{
 input[type="button"]{
     cursor: pointer;
     border: none;
-    background-color: #970417;
+    background-color: #00AEFF;
     font-family:arial, helvetica, sans-serif;
     color: white;
     font-weight: bold;
     padding: 5px 10px 5px 10px;
     height: 32px;
-    border-radius: 0.3em; 
+    border-radius: 0.3em;
+    margin-left:20px; 
 }
 
 @media only screen and (min-width: 35em) {

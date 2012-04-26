@@ -59,7 +59,7 @@
 ?>
 	<!doctype html>
 	<charset=utf-8>
-	<title>@josedaniel startpage</title>
+	<title>Git Toy</title>
 	<link rel="icon" href="favicon.ico" type="image/x-icon" />
 	<link href="style.css" media="screen" rel="stylesheet" type="text/css" />
 	<body>
@@ -77,7 +77,7 @@
 			pushh?<br />
 			<input type="text" name="push" value="true" />
 		</form>
-		<input type="button" value="lalalala" id="go">
+		<input type="button" value="Go" id="go">
 		<pre></pre>
 		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 		<script type="text/javascript">
